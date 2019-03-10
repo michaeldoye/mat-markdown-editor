@@ -2,7 +2,6 @@ import {
     Component,
     ViewChild,
     forwardRef,
-    Renderer2,
     Attribute,
     Input,
     AfterViewInit,
@@ -26,23 +25,24 @@ declare let marked: any;
 declare let hljs: any;
 
 @Component({
-    selector: 'ngx-mde-component',
-    templateUrl: './lib.component.html',
-    styleUrls: ['./lib.component.scss'],
+    // tslint:disable-next-line: component-selector
+    selector: 'mat-markdown-editor',
+    templateUrl: './editor.component.html',
+    styleUrls: ['./editor.component.scss'],
     providers: [
         {
             provide: NG_VALUE_ACCESSOR,
-            useExisting: forwardRef(() => LibComponent),
+            useExisting: forwardRef(() => MatMarkdownEditorComponent),
             multi: true,
         },
         {
             provide: NG_VALIDATORS,
-            useExisting: forwardRef(() => LibComponent),
+            useExisting: forwardRef(() => MatMarkdownEditorComponent),
             multi: true,
         },
     ],
 })
-export class LibComponent
+export class MatMarkdownEditorComponent
     implements
         ControlValueAccessor,
         Validator,
@@ -56,12 +56,11 @@ export class LibComponent
     public isFullScreen = false;
     public previewHtml: any;
     public sliderHeight: any;
+    public editor: any;
 
     private _markdownValue: any;
     private _options: any = {};
-    private _editor: any;
     private _markedOpt: any;
-    private _editorResizeTimer: any;
 
     private _onChange = (_: any) => {};
     private _onTouched = () => {};
@@ -88,11 +87,13 @@ export class LibComponent
     constructor(
         @Attribute('required') public required: boolean = false,
         @Attribute('maxlength') public maxlength: number = -1,
-        private _renderer: Renderer2,
         private _domSanitizer: DomSanitizer
     ) {}
 
     ngOnInit() {
+        const editorElement = this.aceEditorContainer.nativeElement;
+        this.editor = ace.edit(editorElement);
+
         const markedRender = new marked.Renderer();
         markedRender.code = (code: any, language: any) => {
             const validLang = !!(language && hljs.getLanguage(language));
@@ -132,27 +133,25 @@ export class LibComponent
     }
 
     ngAfterViewInit() {
-        const editorElement = this.aceEditorContainer.nativeElement;
-        this._editor = ace.edit(editorElement);
-        this._editor.$blockScrolling = Infinity;
-        this._editor.getSession().setUseWrapMode(true);
-        this._editor.getSession().setMode('ace/mode/markdown');
-        this._editor.setValue(this.markdownValue || '', 1);
-        this._editor.setOption(
+        this.editor.$blockScrolling = Infinity;
+        this.editor.getSession().setUseWrapMode(true);
+        this.editor.getSession().setMode('ace/mode/markdown');
+        this.editor.setValue(this.markdownValue || '', 1);
+        this.editor.setOption(
             'scrollPastEnd',
             this._options.scrollPastEnd || 0
         );
 
-        this._editor.on('change', () => {
-            this.markdownValue = this._editor.getValue();
+        this.editor.on('change', () => {
+            this.markdownValue = this.editor.getValue();
         });
     }
 
     writeValue(value: any | Array<any>): void {
         setTimeout(() => {
             this.markdownValue = value;
-            if (typeof value !== 'undefined' && this._editor) {
-                this._editor.setValue(value || '', 1);
+            if (typeof value !== 'undefined' && this.editor) {
+                this.editor.setValue(value || '', 1);
             }
         }, 1);
     }
@@ -176,70 +175,12 @@ export class LibComponent
         return result;
     }
 
-    insertContent(type: string, customContent?: string) {
-        if (!this._editor) {
-            return;
-        }
-        let selectedText = this._editor.getSelectedText();
-        let startSize = 2;
-        let initText = '';
-        const isSelected = !!selectedText;
-        const range = this._editor.selection.getRange();
-        switch (type) {
-            case 'Bold':
-                initText = 'Bold Text';
-                selectedText = `**${selectedText || initText}**`;
-                break;
-            case 'Italic':
-                initText = 'Italic Text';
-                selectedText = `*${selectedText || initText}*`;
-                startSize = 1;
-                break;
-            case 'Heading':
-                initText = 'Heading';
-                selectedText = `# ${selectedText || initText}`;
-                break;
-            case 'Refrence':
-                initText = 'Refrence';
-                selectedText = `> ${selectedText || initText}`;
-                break;
-            case 'Link':
-                selectedText = `[${selectedText}](http://)`;
-                startSize = 1;
-                break;
-            case 'Image':
-                selectedText = `![](http://)`;
-                break;
-            case 'Ul':
-                selectedText = `- ${selectedText || initText}`;
-                break;
-            case 'Ol':
-                selectedText = `1. ${selectedText || initText}`;
-                startSize = 3;
-                break;
-            case 'Code':
-                initText = 'Source Code';
-                selectedText =
-                    '```language\r\n' + (selectedText || initText) + '\r\n```';
-                startSize = 3;
-                break;
-            case 'Custom':
-                selectedText = customContent;
-                startSize = 0;
-                break;
-        }
-        this._editor.session.replace(range, selectedText);
-        if (!isSelected) {
-            range.start.column += startSize;
-            range.end.column = range.start.column + initText.length;
-            this._editor.selection.setRange(range);
-        }
-        this._editor.focus();
+    onTogglePreview(isOpen: boolean) {
+        this.showPreviewPanel = isOpen;
     }
 
-    togglePreview() {
-        this.showPreviewPanel = !this.showPreviewPanel;
-        this.editorResize();
+    onFullScreen(isFullScreen: boolean) {
+        this.isFullScreen = isFullScreen;
     }
 
     previewPanelClick(event: Event) {
@@ -249,30 +190,7 @@ export class LibComponent
         }
     }
 
-    fullScreen() {
-        this.isFullScreen = !this.isFullScreen;
-        this._renderer.setStyle(
-            document.body,
-            'overflowY',
-            this.isFullScreen ? 'hidden' : 'auto'
-        );
-        this.editorResize();
-    }
-
-    editorResize(timeOut: number = 100) {
-        if (!this._editor) {
-            return;
-        }
-        if (this._editorResizeTimer) {
-            clearTimeout(this._editorResizeTimer);
-        }
-        this._editorResizeTimer = setTimeout(() => {
-            this._editor.resize();
-            this._editor.focus();
-        }, timeOut);
-    }
-
     ngOnDestroy() {
-        return this._editor && this._editor.destroy();
+        return this.editor && this.editor.destroy();
     }
 }

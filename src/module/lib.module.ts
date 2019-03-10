@@ -3,13 +3,14 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { LibComponent } from './component/lib.component';
+import { MatMarkdownEditorComponent } from './editor/editor.component';
 import { LibService } from './service/lib.service';
 import { MaterialModule } from './material.module';
 import { ResizableModule } from 'angular-resizable-element';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { EditorToolbarComponent } from './editor/toolbar/toolbar.component';
 
-export { LibComponent } from './component/lib.component';
+export { MatMarkdownEditorComponent } from './editor/editor.component';
 export { LibService } from './service/lib.service';
 export { MatMarkdownEditorOptions, MarkedjsOption } from './lib.interface';
 
@@ -23,13 +24,13 @@ export { MatMarkdownEditorOptions, MarkedjsOption } from './lib.interface';
         ResizableModule,
         FlexLayoutModule,
     ],
-    exports: [LibComponent],
-    declarations: [LibComponent],
+    exports: [MatMarkdownEditorComponent],
+    declarations: [MatMarkdownEditorComponent, EditorToolbarComponent],
 })
-export class LibModule {
+export class MatMarkdownEditorModule {
     static forRoot(): ModuleWithProviders {
         return {
-            ngModule: LibModule,
+            ngModule: MatMarkdownEditorModule,
             providers: [LibService],
         };
     }
