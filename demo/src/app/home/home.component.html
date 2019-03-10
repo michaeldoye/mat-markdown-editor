@@ -28,13 +28,11 @@
 				#md="ngModel" 
 				name="Content" 
 				[(ngModel)]="content" 
-				[mode]="mode" 
-				[options]="options" 
-				height="500px" 
+				[options]="options"  
 				maxlength="500">
 			</ngx-mde-component>
 		</form>
-
-		<p>Happy ng-hacking!</p>
+		<!-- <p>Model</p>
+		<pre><code class="hljs" [innerHtml]="content | json"></code></pre> -->
   </div>
 </section>

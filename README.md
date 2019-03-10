@@ -1,8 +1,8 @@
 <p align="center">
-  <img height="256px" width="256px" style="text-align: center;" src="https://cdn.rawgit.com/michaeldoye/mat-markdown-editor/master/demo/src/assets/forms.svg">
+  <img height="256px" width="256px" src="https://cdn.rawgit.com/michaeldoye/mat-progress-buttons/master/demo/src/assets/logo.svg">
 </p>
 
-# Mat Markdown editor - Material design markdown editor
+# Material Design Markdown Editor
 
 [![npm version](https://badge.fury.io/js/mat-markdown-editor.svg)](https://badge.fury.io/js/mat-markdown-editor),
 [![Build Status](https://travis-ci.org/michaeldoye/mat-markdown-editor.svg?branch=master)](https://travis-ci.org/michaeldoye/mat-markdown-editor)

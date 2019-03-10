@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import sdk from '@stackblitz/sdk';
+import { MatMarkdownEditorOptions } from 'mat-markdown-editor';
 
 @Component({
   selector: 'app-home',
@@ -9,12 +10,17 @@ import sdk from '@stackblitz/sdk';
 })
 export class HomeComponent implements OnInit {
 
-  public options: any = {
+  public options: MatMarkdownEditorOptions = {
     enablePreviewContentClick: false,
-    resizable: true
+    resizable: true,
+    hideIcons: {},
+    hideToolbar: false,
+    height: '500px',
+    mode: 'editor',
+    preRender: this.preRender,
+    toolbarColor: 'primary',
   };
   public content = '### Example Markdown';
-  public mode = 'editor';
 
   constructor(private titleService: Title) { }
 
@@ -27,7 +33,6 @@ export class HomeComponent implements OnInit {
   }
 
   preRender(e: any) {
-    console.log('e', e);
     return e;
   }
 }

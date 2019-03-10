@@ -79,6 +79,7 @@
     "node-sass": "4.11.0",
     "postcss": "7.0.14",
     "postcss-strip-inline-comments": "0.1.5",
+    "prettier": "1.16.4",
     "pump": "3.0.0",
     "raw-loader": "1.0.0",
     "rollup": "0.58.2",
@@ -156,5 +157,11 @@
       "demo"
     ],
     "scope": "\\S+.*"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": true,
+    "singleQuote": true
   }
 }
