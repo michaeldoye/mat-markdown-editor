@@ -5,12 +5,10 @@ import {
   Renderer2,
   Attribute,
   Input,
-  Output,
   AfterViewInit,
   OnInit,
   OnDestroy,
   ElementRef,
-  EventEmitter,
 } from '@angular/core';
 import {
   NG_VALUE_ACCESSOR,
