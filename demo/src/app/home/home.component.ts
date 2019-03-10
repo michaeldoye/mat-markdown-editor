@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
     enablePreviewContentClick: false,
     resizable: true
   };
-  public content: string;
+  public content = '### Example Markdown';
   public mode = 'editor';
 
   constructor(private titleService: Title) { }

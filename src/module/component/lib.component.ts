@@ -224,7 +224,7 @@ export class LibComponent implements ControlValueAccessor, Validator, OnInit, Af
         selectedText = `> ${selectedText || initText}`;
         break;
       case 'Link':
-        selectedText = `[](http://)`;
+        selectedText = `[${selectedText}](http://)`;
         startSize = 1;
         break;
       case 'Image':

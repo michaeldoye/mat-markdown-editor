@@ -46,7 +46,7 @@
       </div>
 
       <span fxFlex></span>
-      
+
       <div class="btn-group pull-right hide-split">
         <button mat-icon-button type="button" matTooltip="Full Screen Mode" [class.active]="isFullScreen" (click)="fullScreen()" *ngIf="!hideIcons.FullScreen && !isFullScreen">
           <mat-icon aria-label="fullscreen">fullscreen</mat-icon>
@@ -69,10 +69,12 @@
         </div>
       </div>
       <div class="md-footer" *ngIf="maxlength > 0 && mode != 'preview'">
-        <div class="text-right length-view">
-          {{ markdownValue?.length }} / {{ maxlength }}
-        </div>
-        <div class="resize-btn"></div>
+        <mat-toolbar>
+          <div class="text-right length-view">
+            {{ markdownValue?.length }} / {{ maxlength }}
+          </div>
+          <div class="resize-btn"></div>
+        </mat-toolbar>
       </div>
     </div>
     <ngx-mde-resize-listener *ngIf="options?.resizable" (resize)="mdEditorResize($event)"></ngx-mde-resize-listener>
