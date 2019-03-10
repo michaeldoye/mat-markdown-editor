@@ -1,0 +1,71 @@
+.md-editor-container {
+  position: relative;
+  height: 100%;
+  margin-bottom: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  &.fullscreen {
+    margin: 0;
+    position: fixed;
+    border: 0;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 99;
+  }
+  &.md-editor-resizable:not(.fullscreen) {
+    resize: both;
+    overflow: auto;
+    display: inline-block;
+    width: 100%;
+    .md-footer {
+      z-index: -1;
+    }
+  }
+  .md-layout {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .tool-bar {
+      .btn-group {
+
+      }
+    }
+    .editor-container {
+      flex: 1;
+      display: flex;
+      &>div {
+        flex: 1;
+      }
+      .editor-panel {
+        height: 100%;
+        .ace-editor {
+          height: 100%;
+          min-height: 100%;
+        }
+      }
+    }
+    .preview-panel {
+      height: 100%;
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+      background-color: white;
+      padding: 10px;
+      overflow-y: auto;
+    }
+    .md-footer {
+      background-color: #f0f0f0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      .length-view {
+        flex: 1;
+        padding: 4px 2px 0 2px;
+        font-size: 12px;
+        line-height: 16px;
+      }
+      .resize-btn {
+        width: 17px;
+      }
+    }
+  }
+}

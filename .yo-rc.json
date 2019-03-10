@@ -1,0 +1,37 @@
+{
+  "generator-ngx-library": {
+    "version": "6.2.1",
+    "authorName": "Michael Doye",
+    "authorEmail": "michaeldoye@gmail.com",
+    "githubUsername": "michaeldoye",
+    "githubRepoName": "mat-markdown-editor",
+    "projectName": "mat-markdown-editor",
+    "projectVersion": "0.0.1",
+    "projectDescription": "Material design markdown editor",
+    "projectKeywords": [
+      "markdown",
+      "text editor",
+      "angular",
+      "material design"
+    ],
+    "ngVersion": "6.0.0",
+    "ngModules": [
+      "core",
+      "common"
+    ],
+    "otherDependencies": [],
+    "additionalPackageFiles": [],
+    "dependenciesRange": "^",
+    "ngPrefix": "ngx-mde",
+    "testingFramework": "jest",
+    "useGreenkeeper": true,
+    "useCompodoc": true,
+    "enforceNgGitCommitMsg": true,
+    "exclusions": [
+      "config/karma.conf.js",
+      "config/webpack.test.js",
+      "config/karma-test-shim.js"
+    ],
+    "deleteExclusions": []
+  }
+}
