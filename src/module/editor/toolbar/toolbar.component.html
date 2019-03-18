@@ -1,144 +1,143 @@
 <mat-toolbar
-    [color]="options.toolbarColor"
-    *ngIf="!options.hideToolbar && mode != 'preview'"
-    fxLayout="row"
-    fxLayoutAlign="start center"
-    fxLayoutGap="5px"
+  [color]="options.toolbarColor"
+  *ngIf="!options.hideToolbar && options?.mode != 'preview'"
+  fxLayout="row"
+  fxLayoutAlign="start center"
+  fxLayoutGap="5px"
 >
-    <div class="btn-group">
-        <button
-            mat-icon-button
-            type="button"
-            type="button"
-            matTooltip="Bold"
-            (click)="insertContent('Bold')"
-            *ngIf="!options?.hideIcons?.Bold"
-        >
-            <mat-icon aria-label="bold">format_bold</mat-icon>
-        </button>
-        <button
-            mat-icon-button
-            type="button"
-            matTooltip="Italic"
-            (click)="insertContent('Italic')"
-            *ngIf="!options?.hideIcons?.Italic"
-        >
-            <mat-icon aria-label="italic">format_italic</mat-icon>
-        </button>
-        <button
-            mat-icon-button
-            type="button"
-            matTooltip="Heading"
-            (click)="insertContent('Heading')"
-            *ngIf="!options?.hideIcons?.Heading"
-        >
-            <mat-icon aria-label="italic">format_size</mat-icon>
-        </button>
-        <button
-            mat-icon-button
-            type="button"
-            matTooltip="Refrence"
-            (click)="insertContent('Refrence')"
-            *ngIf="!options?.hideIcons?.Reference"
-        >
-            <mat-icon aria-label="quote">format_quote</mat-icon>
-        </button>
-        <mat-divider [vertical]="true"></mat-divider>
-    </div>
+  <div class="btn-group">
+    <button
+      mat-icon-button
+      type="button"
+      matTooltip="Bold"
+      (click)="insertContent('Bold')"
+      *ngIf="!options?.hideIcons?.Bold"
+    >
+      <mat-icon aria-label="bold">format_bold</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      type="button"
+      matTooltip="Italic"
+      (click)="insertContent('Italic')"
+      *ngIf="!options?.hideIcons?.Italic"
+    >
+      <mat-icon aria-label="italic">format_italic</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      type="button"
+      matTooltip="Heading"
+      (click)="insertContent('Heading')"
+      *ngIf="!options?.hideIcons?.Heading"
+    >
+      <mat-icon aria-label="italic">format_size</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      type="button"
+      matTooltip="Refrence"
+      (click)="insertContent('Reference')"
+      *ngIf="!options?.hideIcons?.Reference"
+    >
+      <mat-icon aria-label="quote">format_quote</mat-icon>
+    </button>
+    <mat-divider [vertical]="true"></mat-divider>
+  </div>
 
-    <div class="btn-group">
-        <button
-            mat-icon-button
-            type="button"
-            matTooltip="Link"
-            (click)="insertContent('Link')"
-            *ngIf="!options?.hideIcons?.Link"
-        >
-            <mat-icon aria-label="link">link</mat-icon>
-        </button>
-        <button
-            mat-icon-button
-            type="button"
-            matTooltip="Image"
-            (click)="insertContent('Image')"
-            *ngIf="!options?.hideIcons?.Image"
-        >
-            <mat-icon aria-label="Image">photo</mat-icon>
-        </button>
-        <mat-divider [vertical]="true"></mat-divider>
-    </div>
+  <div class="btn-group">
+    <button
+      mat-icon-button
+      type="button"
+      matTooltip="Link"
+      (click)="insertContent('Link')"
+      *ngIf="!options?.hideIcons?.Link"
+    >
+      <mat-icon aria-label="link">link</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      type="button"
+      matTooltip="Image"
+      (click)="insertContent('Image')"
+      *ngIf="!options?.hideIcons?.Image"
+    >
+      <mat-icon aria-label="Image">photo</mat-icon>
+    </button>
+    <mat-divider [vertical]="true"></mat-divider>
+  </div>
 
-    <div class="btn-group">
-        <button
-            mat-icon-button
-            type="button"
-            matTooltip="Unordered List"
-            (click)="insertContent('Ul')"
-            *ngIf="!options?.hideIcons?.Ul"
-        >
-            <mat-icon aria-label="Unordered List"
-                >format_list_bulleted</mat-icon
-            >
-        </button>
-        <button
-            mat-icon-button
-            type="button"
-            matTooltip="Ordered List"
-            (click)="insertContent('Ol')"
-            *ngIf="!options?.hideIcons?.Ol"
-        >
-            <mat-icon aria-label="Unordered List"
-                >format_list_numbered</mat-icon
-            >
-        </button>
-        <button
-            mat-icon-button
-            type="button"
-            matTooltip="Code Block"
-            (click)="insertContent('Code')"
-            *ngIf="!options?.hideIcons?.Code"
-        >
-            <mat-icon aria-label="code">code</mat-icon>
-        </button>
-        <mat-divider [vertical]="true"></mat-divider>
-    </div>
+  <div class="btn-group">
+    <button
+      mat-icon-button
+      type="button"
+      matTooltip="Unordered List"
+      (click)="insertContent('Ul')"
+      *ngIf="!options?.hideIcons?.Ul"
+    >
+      <mat-icon aria-label="Unordered List">
+        format_list_bulleted
+      </mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      type="button"
+      matTooltip="Ordered List"
+      (click)="insertContent('Ol')"
+      *ngIf="!options?.hideIcons?.Ol"
+    >
+      <mat-icon aria-label="Unordered List">
+        format_list_numbered
+      </mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      type="button"
+      matTooltip="Code Block"
+      (click)="insertContent('Code')"
+      *ngIf="!options?.hideIcons?.Code"
+    >
+      <mat-icon aria-label="code">code</mat-icon>
+    </button>
+    <mat-divider [vertical]="true"></mat-divider>
+  </div>
 
-    <div class="btn-group">
-        <button
-            mat-icon-button
-            type="button"
-            [matTooltip]="previewIsOpen ? 'Hide Preview' : 'Show Preview'"
-            (click)="togglePreview()"
-            *ngIf="!options?.hideIcons?.TogglePreview"
-        >
-            <mat-icon aria-label="Unordered List">{{
-                previewIsOpen ? 'visibility_off' : 'visibility'
-            }}</mat-icon>
-        </button>
-    </div>
+  <div class="btn-group">
+    <button
+      mat-icon-button
+      type="button"
+      [matTooltip]="previewIsOpen ? 'Hide Preview' : 'Show Preview'"
+      (click)="togglePreview()"
+      *ngIf="!options?.hideIcons?.TogglePreview"
+    >
+      <mat-icon aria-label="Unordered List">{{
+        previewIsOpen ? 'visibility_off' : 'visibility'
+      }}</mat-icon>
+    </button>
+  </div>
 
-    <span fxFlex></span>
+  <span fxFlex></span>
 
-    <div class="btn-group pull-right hide-split">
-        <button
-            mat-icon-button
-            type="button"
-            matTooltip="Full Screen Mode"
-            [class.active]="isFullScreen"
-            (click)="fullScreen()"
-            *ngIf="!options?.hideIcons?.FullScreen && !isFullScreen"
-        >
-            <mat-icon aria-label="fullscreen">fullscreen</mat-icon>
-        </button>
-        <button
-            mat-icon-button
-            type="button"
-            matTooltip="Exit Full Screen Mode"
-            [class.active]="isFullScreen"
-            (click)="fullScreen()"
-            *ngIf="!options?.hideIcons?.FullScreen && isFullScreen"
-        >
-            <mat-icon aria-label="fullscreen">fullscreen_exit</mat-icon>
-        </button>
-    </div>
+  <div class="btn-group pull-right hide-split">
+    <button
+      mat-icon-button
+      type="button"
+      matTooltip="Full Screen Mode"
+      [class.active]="isFullScreen"
+      (click)="fullScreen()"
+      *ngIf="!options?.hideIcons?.FullScreen && !isFullScreen"
+    >
+      <mat-icon aria-label="fullscreen">fullscreen</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      type="button"
+      matTooltip="Exit Full Screen Mode"
+      [class.active]="isFullScreen"
+      (click)="fullScreen()"
+      *ngIf="!options?.hideIcons?.FullScreen && isFullScreen"
+    >
+      <mat-icon aria-label="fullscreen">fullscreen_exit</mat-icon>
+    </button>
+  </div>
 </mat-toolbar>
