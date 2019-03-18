@@ -1,41 +1,42 @@
 <div
-    class="md-editor-container"
-    [class.fullscreen]="isFullScreen"
-    [class.md-editor-resizable]="options.resizable"
-    [style.height]="options.height"
+  class="md-editor-container"
+  [class.fullscreen]="isFullScreen"
+  [class.md-editor-resizable]="options.resizable"
+  [style.height]="options.height"
 >
-    <div class="md-layout">
-        <mat-markdown-editor-toolbar
-            [options]="options"
-            [editor]="editor"
-            [isFullScreen]="isFullScreen"
-            (onTogglePreview)="onTogglePreview($event)"
-            (onFullScreen)="onFullScreen($event)"
-        ></mat-markdown-editor-toolbar>
+  <div class="md-layout">
+    <mat-markdown-editor-toolbar
+      [options]="options"
+      [editor]="editor"
+      [isFullScreen]="isFullScreen"
+      (onTogglePreview)="onTogglePreview($event)"
+      (onFullScreen)="onFullScreen($event)"
+    >
+    </mat-markdown-editor-toolbar>
 
-        <div class="editor-container">
-            <div [style.display]="options.mode == 'preview' ? 'none' : null">
-                <div class="editor-panel">
-                    <div class="ace-editor" #aceEditor></div>
-                </div>
-            </div>
-            <div
-                [style.display]="showPreviewPanel ? 'block' : 'none'"
-                (click)="previewPanelClick($event)"
-            >
-                <div class="preview-panel" [innerHtml]="previewHtml"></div>
-            </div>
+    <div class="editor-container">
+      <div
+        class="editor-panel-container"
+        [style.display]="options?.mode == 'preview' ? 'none' : null"
+      >
+        <div class="editor-panel">
+          <div class="ace-editor" #aceEditor></div>
         </div>
-        <div
-            class="md-footer"
-            *ngIf="maxlength > 0 && options.mode != 'preview'"
-        >
-            <mat-toolbar>
-                <div class="text-right length-view">
-                    {{ markdownValue?.length }} / {{ maxlength }}
-                </div>
-                <div class="resize-btn"></div>
-            </mat-toolbar>
-        </div>
+      </div>
+      <div
+        [style.display]="showPreviewPanel ? 'block' : 'none'"
+        (click)="previewPanelClick($event)"
+      >
+        <div class="preview-panel" [innerHTML]="previewHtml"></div>
+      </div>
     </div>
+    <div class="md-footer" *ngIf="maxlength > 0 && options?.mode != 'preview'">
+      <mat-toolbar>
+        <div class="text-right length-view">
+          {{ markdownValue?.length }} / {{ maxlength }}ß
+        </div>
+        <div class="resize-btn"></div>
+      </mat-toolbar>
+    </div>
+  </div>
 </div>

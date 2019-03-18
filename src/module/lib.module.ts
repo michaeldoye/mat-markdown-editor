@@ -15,23 +15,23 @@ export { LibService } from './service/lib.service';
 export { MatMarkdownEditorOptions, MarkedjsOption } from './lib.interface';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        MaterialModule,
-        ReactiveFormsModule,
-        BrowserAnimationsModule,
-        ResizableModule,
-        FlexLayoutModule,
-    ],
-    exports: [MatMarkdownEditorComponent],
-    declarations: [MatMarkdownEditorComponent, EditorToolbarComponent],
+  imports: [
+    CommonModule,
+    FormsModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ResizableModule,
+    FlexLayoutModule,
+  ],
+  exports: [MatMarkdownEditorComponent],
+  declarations: [MatMarkdownEditorComponent, EditorToolbarComponent],
 })
 export class MatMarkdownEditorModule {
-    static forRoot(): ModuleWithProviders {
-        return {
-            ngModule: MatMarkdownEditorModule,
-            providers: [LibService],
-        };
-    }
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: MatMarkdownEditorModule,
+      providers: [LibService],
+    };
+  }
 }
