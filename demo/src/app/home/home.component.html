@@ -16,19 +16,22 @@
         <p>Scroll down to see it in action!</p>
         <p class="buttons">
           <a
-            class="btn btn-outline-primary btn-lg"
+            mat-button
+            class="mat-raised-button"
             href="https://github.com/michaeldoye/mat-markdown-editor"
             target="_blank"
             ><i class="fa fa-github fa-lg"></i> Code on Github</a
           >
           <a
-            class="btn btn-outline-primary btn-lg"
+            mat-button
+            class="mat-raised-button"
             href="doc/index.html"
             target="_blank"
             ><i class="fa fa-book fa-lg"></i> Documentation</a
           >
           <a
-            class="btn btn-outline-primary btn-lg"
+            mat-button
+            class="mat-raised-button"
             href="#"
             (click)="editOnStackBlitz()"
             ><i class="fa fa-bolt fa-lg"></i> Edit on StackBlitz</a
@@ -52,9 +55,11 @@
         name="Content"
         [(ngModel)]="content"
         [options]="options"
-        maxlength="5000"
+        maxlength="500"
+        required
       >
       </mat-markdown-editor>
     </form>
+    <pre>{{ form.status | json }}</pre>
   </div>
 </section>

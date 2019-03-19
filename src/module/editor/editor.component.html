@@ -1,6 +1,7 @@
 <div
   class="md-editor-container"
   [class.fullscreen]="isFullScreen"
+  [class.border]="options.showBorder"
   [class.md-editor-resizable]="options.resizable"
   [style.height]="options.height"
 >
@@ -33,7 +34,7 @@
     <div class="md-footer" *ngIf="maxlength > 0 && options?.mode != 'preview'">
       <mat-toolbar>
         <div class="text-right length-view">
-          {{ markdownValue?.length }} / {{ maxlength }}ß
+          {{ markdownValue?.length }} / {{ maxlength }}
         </div>
         <div class="resize-btn"></div>
       </mat-toolbar>

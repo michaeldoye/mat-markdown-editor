@@ -1,5 +1,5 @@
 <p align="center">
-  <img height="256px" width="256px" src="https://cdn.rawgit.com/michaeldoye/mat-progress-buttons/master/demo/src/assets/logo.svg">
+  <img height="256px" width="256px" src="https://raw.githubusercontent.com/michaeldoye/mat-markdown-editor/master/demo/src/assets/forms.png">
 </p>
 
 # Material Design Markdown Editor
@@ -17,6 +17,7 @@ View all the directives in action at https://michaeldoye.github.io/mat-markdown-
 
 ## Dependencies
 * [Angular](https://angular.io) (*requires* Angular 2 or higher, tested with 2.0.0)
+* [Angular Material](https://material.angular.io/)
 
 ## Installation
 Install above dependencies via *npm*. 
@@ -24,6 +25,17 @@ Install above dependencies via *npm*.
 Now install `mat-markdown-editor` via:
 ```shell
 npm install --save mat-markdown-editor
+```
+
+Add the following to your index.html (or [configure](https://nitayneeman.com/posts/how-to-add-third-party-library-in-angular-cli/) via `angular-cli.json`)
+* [Marked JS](https://marked.js.org/#/README.md#README.md)
+* [Hightlight JS](https://highlightjs.org/)
+* [Ace Editor](https://ace.c9.io/)
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.8/ace.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 ```
 
 ---
@@ -39,16 +51,16 @@ map: {
 
 Once installed you need to import the main module:
 ```js
-import { LibModule } from 'mat-markdown-editor';
+import { MatMarkdownEditorModule } from 'mat-markdown-editor';
 ```
 The only remaining part is to list the imported module in your application module. The exact method will be slightly
 different for the root (top-level) module for which you should end up with the code similar to (notice ` LibModule .forRoot()`):
 ```js
-import { LibModule } from 'mat-markdown-editor';
+import { MatMarkdownEditorModule } from 'mat-markdown-editor';
 
 @NgModule({
   declarations: [AppComponent, ...],
-  imports: [LibModule.forRoot(), ...],  
+  imports: [MatMarkdownEditorModule.forRoot(), ...],  
   bootstrap: [AppComponent]
 })
 export class AppModule {
@@ -58,11 +70,11 @@ export class AppModule {
 Other modules in your application can simply import ` LibModule `:
 
 ```js
-import { LibModule } from 'mat-markdown-editor';
+import { MatMarkdownEditorModule } from 'mat-markdown-editor';
 
 @NgModule({
   declarations: [OtherComponent, ...],
-  imports: [LibModule, ...], 
+  imports: [MatMarkdownEditorModule, ...], 
 })
 export class OtherModule {
 }
@@ -70,7 +82,56 @@ export class OtherModule {
 
 ## Usage
 
+`// TODO`
 
+<a name="run-demo-app-locally"/>
+
+## Run Demo App Locally
+
+- [clone this repo](https://github.com/michaeldoye/mat-markdown-editor.git) by running
+```bash
+$ git clone https://github.com/michaeldoye/mat-markdown-editor.git
+```
+
+- link the **mat-markdown-editor** package
+
+```bash
+$ gulp link
+```
+
+- navigate to the demo app directory
+```bash
+$ cd demo
+```
+
+- install the dependencies
+```bash
+$ npm i
+```
+
+- run/start/serve the app
+```bash
+$ npm run start
+```
+or
+```bash
+$ ng serve --open
+```
+- the app is now hosted by `http://localhost:4200/`
+
+
+<a name="development"/>
+
+## Development
+
+1. clone this [repo](https://github.com/michaeldoye/mat-markdown-editor.git)
+2. Install the dependencies by running `npm i`
+3. build the library `npm run build` or `gulp build`
+4. Link the library `gulp link`
+ 5. Navigate to the demo app's directory
+  - `cd demo`
+  _ `npm i`
+  _ `npm start`
 
 ## License
 

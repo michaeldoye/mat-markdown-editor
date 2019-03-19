@@ -1,7 +1,7 @@
 export interface MatMarkdownEditorOptions {
   showBorder?: boolean; // Show editor component's border
   // tslint:disable-next-line: max-line-length
-  hideIcons?: object; // ['Bold', 'Italic', 'Heading', 'Refrence', 'Link', 'Image', 'Ul', 'Ol', 'Code', 'TogglePreview', 'FullScreen'], Default is empty
+  hideIcons?: object; // ['Bold', 'Italic', 'Heading', 'Reference', 'Link', 'Image', 'Ul', 'Ol', 'Code', 'TogglePreview', 'FullScreen'], Default is empty
   scrollPastEnd?: number; // The option for ace editor
   enablePreviewContentClick?: boolean; // Allow user fire the click event on the preview panel, like href etc.
   resizable?: boolean; // Allow resize the editor

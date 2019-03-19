@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core'
-import { CommonModule } from '@angular/common'
-import { MatMarkdownEditorModule } from 'mat-markdown-editor'
-import { FormsModule } from '@angular/forms'
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatMarkdownEditorModule } from 'mat-markdown-editor';
+import { FormsModule } from '@angular/forms';
 
-import { HomeRoutingModule } from './home-routing.module'
-import { HomeComponent } from './home.component'
+import { HomeRoutingModule } from './home-routing.module';
+import { HomeComponent } from './home.component';
+import { MaterialModule } from '../material.module';
 
 @NgModule({
   imports: [
@@ -12,6 +13,7 @@ import { HomeComponent } from './home.component'
     MatMarkdownEditorModule.forRoot(),
     HomeRoutingModule,
     FormsModule,
+    MaterialModule,
   ],
   declarations: [HomeComponent],
 })

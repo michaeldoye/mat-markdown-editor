@@ -6,7 +6,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMarkdownEditorComponent } from './editor/editor.component';
 import { LibService } from './service/lib.service';
 import { MaterialModule } from './material.module';
-import { ResizableModule } from 'angular-resizable-element';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { EditorToolbarComponent } from './editor/toolbar/toolbar.component';
 
@@ -21,7 +20,6 @@ export { MatMarkdownEditorOptions, MarkedjsOption } from './lib.interface';
     MaterialModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    ResizableModule,
     FlexLayoutModule,
   ],
   exports: [MatMarkdownEditorComponent],

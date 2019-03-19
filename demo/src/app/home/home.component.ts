@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core'
-import { Title } from '@angular/platform-browser'
-import sdk from '@stackblitz/sdk'
-import { MatMarkdownEditorOptions } from 'mat-markdown-editor'
+import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import sdk from '@stackblitz/sdk';
+import { MatMarkdownEditorOptions } from 'mat-markdown-editor';
 
 @Component({
   selector: 'app-home',
@@ -12,21 +12,26 @@ export class HomeComponent implements OnInit {
   public options: MatMarkdownEditorOptions = {
     enablePreviewContentClick: false,
     resizable: true,
+    showBorder: true,
     hideIcons: {},
     hideToolbar: false,
     height: '500px',
     mode: 'editor',
     toolbarColor: 'primary',
-  }
-  public content = '### Example Markdown'
+    preRender: this.preRender,
+  };
+  public content = '### Example Markdown';
 
   constructor(private titleService: Title) {}
 
   ngOnInit() {
-    this.titleService.setTitle('Home | mat-markdown-editor')
+    this.titleService.setTitle('Home | mat-markdown-editor');
   }
 
   editOnStackBlitz() {
-    sdk.openGithubProject('michaeldoye/mat-markdown-editor/tree/master/demo')
+    sdk.openGithubProject('michaeldoye/mat-markdown-editor/tree/master/demo');
+  }
+  preRender(markDown: any) {
+    return markDown;
   }
 }
