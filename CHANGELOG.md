@@ -1,5 +1,10 @@
+<a name="0.0.3"></a>
+## [0.0.3](https://github.com/michaeldoye/mat-markdown-editor/compare/v0.0.2...v0.0.3) (2019-03-19)
+
+
+
 <a name="0.0.2"></a>
-## 0.0.2 (2019-03-19)
+## [0.0.2](https://github.com/michaeldoye/mat-markdown-editor/compare/aa4765c...v0.0.2) (2019-03-19)
 
 
 ### Bug Fixes
