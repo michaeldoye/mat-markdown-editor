@@ -27,7 +27,7 @@ Now install `mat-markdown-editor` via:
 npm install --save mat-markdown-editor
 ```
 
-Add the following to your index.html (or [configure](https://nitayneeman.com/posts/how-to-add-third-party-library-in-angular-cli/) via `angular-cli.json`)
+Add the following to your `index.html` (or [configure](https://nitayneeman.com/posts/how-to-add-third-party-library-in-angular-cli/) via `angular-cli.json`)
 * [Marked JS](https://marked.js.org/#/README.md#README.md)
 * [Hightlight JS](https://highlightjs.org/)
 * [Ace Editor](https://ace.c9.io/)
