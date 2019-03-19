@@ -1,5 +1,5 @@
 <p align="center">
-  <img height="256px" width="256px" src="https://raw.githubusercontent.com/michaeldoye/mat-markdown-editor/master/demo/src/assets/forms.png">
+  <img width="256px" src="https://raw.githubusercontent.com/michaeldoye/mat-markdown-editor/master/demo/src/assets/forms.png">
 </p>
 
 # Material Design Markdown Editor
