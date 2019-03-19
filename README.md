@@ -4,7 +4,7 @@
 
 # Material Design Markdown Editor
 
-[![npm version](https://badge.fury.io/js/mat-markdown-editor.svg)](https://badge.fury.io/js/mat-markdown-editor),
+[![npm version](https://badge.fury.io/js/mat-markdown-editor.svg)](https://badge.fury.io/js/mat-markdown-editor)
 [![Build Status](https://travis-ci.org/michaeldoye/mat-markdown-editor.svg?branch=master)](https://travis-ci.org/michaeldoye/mat-markdown-editor)
 [![Coverage Status](https://coveralls.io/repos/github/michaeldoye/mat-markdown-editor/badge.svg?branch=master)](https://coveralls.io/github/michaeldoye/mat-markdown-editor?branch=master)
 [![dependency Status](https://david-dm.org/michaeldoye/mat-markdown-editor/status.svg)](https://david-dm.org/michaeldoye/mat-markdown-editor)
@@ -54,7 +54,7 @@ Once installed you need to import the main module:
 import { MatMarkdownEditorModule } from 'mat-markdown-editor';
 ```
 The only remaining part is to list the imported module in your application module. The exact method will be slightly
-different for the root (top-level) module for which you should end up with the code similar to (notice ` LibModule .forRoot()`):
+different for the root (top-level) module for which you should end up with the code similar to (notice ` MatMarkdownEditorModule.forRoot()`):
 ```js
 import { MatMarkdownEditorModule } from 'mat-markdown-editor';
 
@@ -67,7 +67,7 @@ export class AppModule {
 }
 ```
 
-Other modules in your application can simply import ` LibModule `:
+Other modules in your application can simply import ` MatMarkdownEditorModule `:
 
 ```js
 import { MatMarkdownEditorModule } from 'mat-markdown-editor';
@@ -82,7 +82,45 @@ export class OtherModule {
 
 ## Usage
 
-`// TODO`
+```js
+import { Component } from '@angular/core';
+import { MatMarkdownEditorOptions } from 'mat-markdown-editor';
+
+@Component({
+  selector: 'app-home',
+  template: `
+      <form #form="ngForm">
+        <mat-markdown-editor
+          [(ngModel)]="content"
+          [options]="options"
+          name="Content"
+          maxlength="500"
+          required>
+        </mat-markdown-editor>
+      </form>
+  `,
+})
+export class HomeComponent {
+  public options: MatMarkdownEditorOptions = {
+    enablePreviewContentClick: false,
+    resizable: true,
+    showBorder: true,
+    hideIcons: {},
+    hideToolbar: false,
+    height: '500px',
+    mode: 'editor',
+    toolbarColor: 'primary',
+    preRender: this.preRender,
+  };
+
+  preRender(markDown: any) {
+    // Here you have access to the markdown binding
+    // before it is rendered
+    return markDown;
+  }
+}
+```
+All options can be found [here](https://github.com/michaeldoye/mat-markdown-editor/blob/master/src/module/lib.interface.ts)
 
 <a name="run-demo-app-locally"/>
 
