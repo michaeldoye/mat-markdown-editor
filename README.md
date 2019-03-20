@@ -13,7 +13,7 @@
 
 ## Demo
 
-View all the directives in action at https://michaeldoye.github.io/mat-markdown-editor
+View it in action at https://mat-markdown-editor.firebaseapp.com
 
 ## Dependencies
 * [Angular](https://angular.io) (*requires* Angular 2 or higher, tested with 2.0.0)
