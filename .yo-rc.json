@@ -14,7 +14,7 @@
       "angular",
       "material design"
     ],
-    "ngVersion": "6.0.0",
+    "ngVersion": "6.0.0",\
     "ngModules": [
       "core",
       "common"
