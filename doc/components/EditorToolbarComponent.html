@@ -1,0 +1,1042 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>mat-markdown-editor documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">mat-markdown-editor documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>EditorToolbarComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/module/editor/toolbar/toolbar.component.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>mat-markdown-editor-toolbar</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./toolbar.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./toolbar.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_editorResizeTimer">_editorResizeTimer</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#previewIsOpen">previewIsOpen</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#editorResize">editorResize</a>
+                            </li>
+                            <li>
+                                <a href="#fullScreen">fullScreen</a>
+                            </li>
+                            <li>
+                                <a href="#insertContent">insertContent</a>
+                            </li>
+                            <li>
+                                <a href="#togglePreview">togglePreview</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#editor">editor</a>
+                            </li>
+                            <li>
+                                <a href="#isFullScreen">isFullScreen</a>
+                            </li>
+                            <li>
+                                <a href="#options">options</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#onFullScreen">onFullScreen</a>
+                            </li>
+                            <li>
+                                <a href="#onTogglePreview">onTogglePreview</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(_renderer: <a href="https://angular.io/api/core/Renderer2" target="_blank">Renderer2</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/module/editor/toolbar/toolbar.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>_renderer</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/Renderer2" target="_blank" >Renderer2</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="editor"></a>
+                        <b>editor</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/module/editor/toolbar/toolbar.component.ts:18</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isFullScreen"></a>
+                        <b>isFullScreen</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/module/editor/toolbar/toolbar.component.ts:17</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="options"></a>
+                        <b>options</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/module/editor/toolbar/toolbar.component.ts:16</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onFullScreen"></a>
+                        <b>onFullScreen</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/module/editor/toolbar/toolbar.component.ts:20</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onTogglePreview"></a>
+                        <b>onTogglePreview</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/module/editor/toolbar/toolbar.component.ts:19</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editorResize"></a>
+                    <span class="name">
+                        <b>
+                            editorResize
+                        </b>
+                        <a href="#editorResize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>editorResize(timeOut: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="105"
+                            class="link-to-prism">src/module/editor/toolbar/toolbar.component.ts:105</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>timeOut</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>100</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fullScreen"></a>
+                    <span class="name">
+                        <b>
+                            fullScreen
+                        </b>
+                        <a href="#fullScreen"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>fullScreen()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="94"
+                            class="link-to-prism">src/module/editor/toolbar/toolbar.component.ts:94</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="insertContent"></a>
+                    <span class="name">
+                        <b>
+                            insertContent
+                        </b>
+                        <a href="#insertContent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>insertContent(type: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, customContent?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">src/module/editor/toolbar/toolbar.component.ts:27</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>type</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>customContent</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="togglePreview"></a>
+                    <span class="name">
+                        <b>
+                            togglePreview
+                        </b>
+                        <a href="#togglePreview"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>togglePreview()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="88"
+                            class="link-to-prism">src/module/editor/toolbar/toolbar.component.ts:88</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_editorResizeTimer"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _editorResizeTimer</b>
+                            <a href="#_editorResizeTimer"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/module/editor/toolbar/toolbar.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="previewIsOpen"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            previewIsOpen</b>
+                            <a href="#previewIsOpen"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/module/editor/toolbar/toolbar.component.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  Renderer2,
+} from &#x27;@angular/core&#x27;;
+
+@Component({
+  // tslint:disable-next-line: component-selector
+  selector: &#x27;mat-markdown-editor-toolbar&#x27;,
+  templateUrl: &#x27;./toolbar.component.html&#x27;,
+  styleUrls: [&#x27;./toolbar.component.scss&#x27;],
+})
+export class EditorToolbarComponent {
+  @Input() public options: any;
+  @Input() public isFullScreen: boolean;
+  @Input() private editor: any;
+  @Output() public onTogglePreview &#x3D; new EventEmitter();
+  @Output() public onFullScreen &#x3D; new EventEmitter();
+
+  public previewIsOpen &#x3D; true;
+  private _editorResizeTimer: any;
+
+  constructor(private _renderer: Renderer2) {}
+
+  insertContent(type: string, customContent?: string) {
+    if (!this.editor) {
+      return;
+    }
+    let selectedText &#x3D; this.editor.getSelectedText();
+    let startSize &#x3D; 2;
+    let initText &#x3D; &#x27;&#x27;;
+    const isSelected &#x3D; !!selectedText;
+    const range &#x3D; this.editor.selection.getRange();
+    switch (type) {
+      case &#x27;Bold&#x27;:
+        initText &#x3D; &#x27;Bold Text&#x27;;
+        selectedText &#x3D; &#x60;**${selectedText || initText}**&#x60;;
+        break;
+      case &#x27;Italic&#x27;:
+        initText &#x3D; &#x27;Italic Text&#x27;;
+        selectedText &#x3D; &#x60;*${selectedText || initText}*&#x60;;
+        startSize &#x3D; 1;
+        break;
+      case &#x27;Heading&#x27;:
+        initText &#x3D; &#x27;Heading&#x27;;
+        selectedText &#x3D; &#x60;# ${selectedText || initText}&#x60;;
+        break;
+      case &#x27;Reference&#x27;:
+        initText &#x3D; &#x27;Reference&#x27;;
+        selectedText &#x3D; &#x60;&gt; ${selectedText || initText}&#x60;;
+        break;
+      case &#x27;Link&#x27;:
+        selectedText &#x3D; &#x60;[${selectedText}](http://)&#x60;;
+        startSize &#x3D; 1;
+        break;
+      case &#x27;Image&#x27;:
+        selectedText &#x3D; &#x60;![](http://)&#x60;;
+        break;
+      case &#x27;Ul&#x27;:
+        selectedText &#x3D; &#x60;- ${selectedText || initText}&#x60;;
+        break;
+      case &#x27;Ol&#x27;:
+        selectedText &#x3D; &#x60;1. ${selectedText || initText}&#x60;;
+        startSize &#x3D; 3;
+        break;
+      case &#x27;Code&#x27;:
+        initText &#x3D; &#x27;Source Code&#x27;;
+        selectedText &#x3D;
+          &#x27;&#x60;&#x60;&#x60;language\r\n&#x27; + (selectedText || initText) + &#x27;\r\n&#x60;&#x60;&#x60;&#x27;;
+        startSize &#x3D; 3;
+        break;
+      case &#x27;Custom&#x27;:
+        selectedText &#x3D; customContent;
+        startSize &#x3D; 0;
+        break;
+    }
+    this.editor.session.replace(range, selectedText);
+    if (!isSelected) {
+      range.start.column +&#x3D; startSize;
+      range.end.column &#x3D; range.start.column + initText.length;
+      this.editor.selection.setRange(range);
+    }
+    this.editor.focus();
+  }
+
+  togglePreview() {
+    this.previewIsOpen &#x3D; !this.previewIsOpen;
+    this.onTogglePreview.emit(this.previewIsOpen);
+    this.editorResize();
+  }
+
+  fullScreen() {
+    this.isFullScreen &#x3D; !this.isFullScreen;
+    this._renderer.setStyle(
+      document.body,
+      &#x27;overflowY&#x27;,
+      this.isFullScreen ? &#x27;hidden&#x27; : &#x27;auto&#x27;
+    );
+    this.onFullScreen.emit(this.isFullScreen);
+    this.editorResize();
+  }
+
+  editorResize(timeOut: number &#x3D; 100) {
+    if (!this.editor) {
+      return;
+    }
+    if (this._editorResizeTimer) {
+      clearTimeout(this._editorResizeTimer);
+    }
+    this._editorResizeTimer &#x3D; setTimeout(() &#x3D;&gt; {
+      this.editor.resize();
+      this.editor.focus();
+    }, timeOut);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;mat-toolbar
+  [color]&#x3D;&quot;options.toolbarColor&quot;
+  *ngIf&#x3D;&quot;!options.hideToolbar &amp;&amp; options?.mode !&#x3D; &#x27;preview&#x27;&quot;
+  fxLayout&#x3D;&quot;row&quot;
+  fxLayoutAlign&#x3D;&quot;start center&quot;
+  fxLayoutGap&#x3D;&quot;5px&quot;
+&gt;
+  &lt;div class&#x3D;&quot;btn-group&quot;&gt;
+    &lt;button
+      mat-icon-button
+      type&#x3D;&quot;button&quot;
+      matTooltip&#x3D;&quot;Bold&quot;
+      (click)&#x3D;&quot;insertContent(&#x27;Bold&#x27;)&quot;
+      *ngIf&#x3D;&quot;!options?.hideIcons?.Bold&quot;
+    &gt;
+      &lt;mat-icon aria-label&#x3D;&quot;bold&quot;&gt;format_bold&lt;/mat-icon&gt;
+    &lt;/button&gt;
+    &lt;button
+      mat-icon-button
+      type&#x3D;&quot;button&quot;
+      matTooltip&#x3D;&quot;Italic&quot;
+      (click)&#x3D;&quot;insertContent(&#x27;Italic&#x27;)&quot;
+      *ngIf&#x3D;&quot;!options?.hideIcons?.Italic&quot;
+    &gt;
+      &lt;mat-icon aria-label&#x3D;&quot;italic&quot;&gt;format_italic&lt;/mat-icon&gt;
+    &lt;/button&gt;
+    &lt;button
+      mat-icon-button
+      type&#x3D;&quot;button&quot;
+      matTooltip&#x3D;&quot;Heading&quot;
+      (click)&#x3D;&quot;insertContent(&#x27;Heading&#x27;)&quot;
+      *ngIf&#x3D;&quot;!options?.hideIcons?.Heading&quot;
+    &gt;
+      &lt;mat-icon aria-label&#x3D;&quot;italic&quot;&gt;format_size&lt;/mat-icon&gt;
+    &lt;/button&gt;
+    &lt;button
+      mat-icon-button
+      type&#x3D;&quot;button&quot;
+      matTooltip&#x3D;&quot;Refrence&quot;
+      (click)&#x3D;&quot;insertContent(&#x27;Reference&#x27;)&quot;
+      *ngIf&#x3D;&quot;!options?.hideIcons?.Reference&quot;
+    &gt;
+      &lt;mat-icon aria-label&#x3D;&quot;quote&quot;&gt;format_quote&lt;/mat-icon&gt;
+    &lt;/button&gt;
+    &lt;mat-divider [vertical]&#x3D;&quot;true&quot;&gt;&lt;/mat-divider&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;btn-group&quot;&gt;
+    &lt;button
+      mat-icon-button
+      type&#x3D;&quot;button&quot;
+      matTooltip&#x3D;&quot;Link&quot;
+      (click)&#x3D;&quot;insertContent(&#x27;Link&#x27;)&quot;
+      *ngIf&#x3D;&quot;!options?.hideIcons?.Link&quot;
+    &gt;
+      &lt;mat-icon aria-label&#x3D;&quot;link&quot;&gt;link&lt;/mat-icon&gt;
+    &lt;/button&gt;
+    &lt;button
+      mat-icon-button
+      type&#x3D;&quot;button&quot;
+      matTooltip&#x3D;&quot;Image&quot;
+      (click)&#x3D;&quot;insertContent(&#x27;Image&#x27;)&quot;
+      *ngIf&#x3D;&quot;!options?.hideIcons?.Image&quot;
+    &gt;
+      &lt;mat-icon aria-label&#x3D;&quot;Image&quot;&gt;photo&lt;/mat-icon&gt;
+    &lt;/button&gt;
+    &lt;mat-divider [vertical]&#x3D;&quot;true&quot;&gt;&lt;/mat-divider&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;btn-group&quot;&gt;
+    &lt;button
+      mat-icon-button
+      type&#x3D;&quot;button&quot;
+      matTooltip&#x3D;&quot;Unordered List&quot;
+      (click)&#x3D;&quot;insertContent(&#x27;Ul&#x27;)&quot;
+      *ngIf&#x3D;&quot;!options?.hideIcons?.Ul&quot;
+    &gt;
+      &lt;mat-icon aria-label&#x3D;&quot;Unordered List&quot;&gt;
+        format_list_bulleted
+      &lt;/mat-icon&gt;
+    &lt;/button&gt;
+    &lt;button
+      mat-icon-button
+      type&#x3D;&quot;button&quot;
+      matTooltip&#x3D;&quot;Ordered List&quot;
+      (click)&#x3D;&quot;insertContent(&#x27;Ol&#x27;)&quot;
+      *ngIf&#x3D;&quot;!options?.hideIcons?.Ol&quot;
+    &gt;
+      &lt;mat-icon aria-label&#x3D;&quot;Unordered List&quot;&gt;
+        format_list_numbered
+      &lt;/mat-icon&gt;
+    &lt;/button&gt;
+    &lt;button
+      mat-icon-button
+      type&#x3D;&quot;button&quot;
+      matTooltip&#x3D;&quot;Code Block&quot;
+      (click)&#x3D;&quot;insertContent(&#x27;Code&#x27;)&quot;
+      *ngIf&#x3D;&quot;!options?.hideIcons?.Code&quot;
+    &gt;
+      &lt;mat-icon aria-label&#x3D;&quot;code&quot;&gt;code&lt;/mat-icon&gt;
+    &lt;/button&gt;
+    &lt;mat-divider [vertical]&#x3D;&quot;true&quot;&gt;&lt;/mat-divider&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;btn-group&quot;&gt;
+    &lt;button
+      mat-icon-button
+      type&#x3D;&quot;button&quot;
+      [matTooltip]&#x3D;&quot;previewIsOpen ? &#x27;Hide Preview&#x27; : &#x27;Show Preview&#x27;&quot;
+      (click)&#x3D;&quot;togglePreview()&quot;
+      *ngIf&#x3D;&quot;!options?.hideIcons?.TogglePreview&quot;
+    &gt;
+      &lt;mat-icon aria-label&#x3D;&quot;Unordered List&quot;&gt;{{
+        previewIsOpen ? &#x27;visibility_off&#x27; : &#x27;visibility&#x27;
+      }}&lt;/mat-icon&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;span fxFlex&gt;&lt;/span&gt;
+
+  &lt;div class&#x3D;&quot;btn-group pull-right hide-split&quot;&gt;
+    &lt;button
+      mat-icon-button
+      type&#x3D;&quot;button&quot;
+      matTooltip&#x3D;&quot;Full Screen Mode&quot;
+      [class.active]&#x3D;&quot;isFullScreen&quot;
+      (click)&#x3D;&quot;fullScreen()&quot;
+      *ngIf&#x3D;&quot;!options?.hideIcons?.FullScreen &amp;&amp; !isFullScreen&quot;
+    &gt;
+      &lt;mat-icon aria-label&#x3D;&quot;fullscreen&quot;&gt;fullscreen&lt;/mat-icon&gt;
+    &lt;/button&gt;
+    &lt;button
+      mat-icon-button
+      type&#x3D;&quot;button&quot;
+      matTooltip&#x3D;&quot;Exit Full Screen Mode&quot;
+      [class.active]&#x3D;&quot;isFullScreen&quot;
+      (click)&#x3D;&quot;fullScreen()&quot;
+      *ngIf&#x3D;&quot;!options?.hideIcons?.FullScreen &amp;&amp; isFullScreen&quot;
+    &gt;
+      &lt;mat-icon aria-label&#x3D;&quot;fullscreen&quot;&gt;fullscreen_exit&lt;/mat-icon&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/mat-toolbar&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./toolbar.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><mat-toolbar  [color]="options.toolbarColor"  *ngIf="!options.hideToolbar && options?.mode != \'preview\'"  fxLayout="row"  fxLayoutAlign="start center"  fxLayoutGap="5px">  <div class="btn-group">    <button      mat-icon-button      type="button"      matTooltip="Bold"      (click)="insertContent(\'Bold\')"      *ngIf="!options?.hideIcons?.Bold"    >      <mat-icon aria-label="bold">format_bold</mat-icon>    </button>    <button      mat-icon-button      type="button"      matTooltip="Italic"      (click)="insertContent(\'Italic\')"      *ngIf="!options?.hideIcons?.Italic"    >      <mat-icon aria-label="italic">format_italic</mat-icon>    </button>    <button      mat-icon-button      type="button"      matTooltip="Heading"      (click)="insertContent(\'Heading\')"      *ngIf="!options?.hideIcons?.Heading"    >      <mat-icon aria-label="italic">format_size</mat-icon>    </button>    <button      mat-icon-button      type="button"      matTooltip="Refrence"      (click)="insertContent(\'Reference\')"      *ngIf="!options?.hideIcons?.Reference"    >      <mat-icon aria-label="quote">format_quote</mat-icon>    </button>    <mat-divider [vertical]="true"></mat-divider>  </div>  <div class="btn-group">    <button      mat-icon-button      type="button"      matTooltip="Link"      (click)="insertContent(\'Link\')"      *ngIf="!options?.hideIcons?.Link"    >      <mat-icon aria-label="link">link</mat-icon>    </button>    <button      mat-icon-button      type="button"      matTooltip="Image"      (click)="insertContent(\'Image\')"      *ngIf="!options?.hideIcons?.Image"    >      <mat-icon aria-label="Image">photo</mat-icon>    </button>    <mat-divider [vertical]="true"></mat-divider>  </div>  <div class="btn-group">    <button      mat-icon-button      type="button"      matTooltip="Unordered List"      (click)="insertContent(\'Ul\')"      *ngIf="!options?.hideIcons?.Ul"    >      <mat-icon aria-label="Unordered List">        format_list_bulleted      </mat-icon>    </button>    <button      mat-icon-button      type="button"      matTooltip="Ordered List"      (click)="insertContent(\'Ol\')"      *ngIf="!options?.hideIcons?.Ol"    >      <mat-icon aria-label="Unordered List">        format_list_numbered      </mat-icon>    </button>    <button      mat-icon-button      type="button"      matTooltip="Code Block"      (click)="insertContent(\'Code\')"      *ngIf="!options?.hideIcons?.Code"    >      <mat-icon aria-label="code">code</mat-icon>    </button>    <mat-divider [vertical]="true"></mat-divider>  </div>  <div class="btn-group">    <button      mat-icon-button      type="button"      [matTooltip]="previewIsOpen ? \'Hide Preview\' : \'Show Preview\'"      (click)="togglePreview()"      *ngIf="!options?.hideIcons?.TogglePreview"    >      <mat-icon aria-label="Unordered List">{{        previewIsOpen ? \'visibility_off\' : \'visibility\'      }}</mat-icon>    </button>  </div>  <span fxFlex></span>  <div class="btn-group pull-right hide-split">    <button      mat-icon-button      type="button"      matTooltip="Full Screen Mode"      [class.active]="isFullScreen"      (click)="fullScreen()"      *ngIf="!options?.hideIcons?.FullScreen && !isFullScreen"    >      <mat-icon aria-label="fullscreen">fullscreen</mat-icon>    </button>    <button      mat-icon-button      type="button"      matTooltip="Exit Full Screen Mode"      [class.active]="isFullScreen"      (click)="fullScreen()"      *ngIf="!options?.hideIcons?.FullScreen && isFullScreen"    >      <mat-icon aria-label="fullscreen">fullscreen_exit</mat-icon>    </button>  </div></mat-toolbar></div>'
+    var COMPONENTS = [{'name': 'EditorToolbarComponent', 'selector': 'mat-markdown-editor-toolbar'},{'name': 'MatMarkdownEditorComponent', 'selector': 'mat-markdown-editor'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'EditorToolbarComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'EditorToolbarComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
