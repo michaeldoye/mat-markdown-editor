@@ -15,6 +15,8 @@
 
 View it in action at https://mat-markdown-editor.firebaseapp.com
 
+Edit on StackBlitz: https://stackblitz.com/edit/angular-w4tejv
+
 ## Dependencies
 * [Angular](https://angular.io) (*requires* Angular 2 or higher, tested with 2.0.0)
 * [Angular Material](https://material.angular.io/)
