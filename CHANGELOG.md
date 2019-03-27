@@ -1,3 +1,15 @@
+<a name="0.0.8"></a>
+## [0.0.8](https://github.com/michaeldoye/mat-markdown-editor/compare/v0.0.7...v0.0.8) (2019-03-27)
+
+
+### Bug Fixes
+
+* **demo:** readme update ([b3a1c77](https://github.com/michaeldoye/mat-markdown-editor/commit/b3a1c77))
+* **demo:** readme update ([39b399e](https://github.com/michaeldoye/mat-markdown-editor/commit/39b399e))
+* **lib:** update travis ([8dfda7d](https://github.com/michaeldoye/mat-markdown-editor/commit/8dfda7d))
+
+
+
 <a name="0.0.7"></a>
 ## [0.0.7](https://github.com/michaeldoye/mat-markdown-editor/compare/v0.0.6...v0.0.7) (2019-03-20)
 
