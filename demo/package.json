@@ -66,7 +66,7 @@
     "gulp-hub": "4.2.0",
     "jest": "24.3.1",
     "jest-preset-angular": "7.0.1",
-    "lodash": "4.17.11",
+    "lodash": "4.17.13",
     "prettier": "1.16.4",
     "protractor": "~5.4.2",
     "reflect-metadata": "~0.1.10",
