@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatMarkdownEditorComponent } from './editor/editor.component';
 import { LibService } from './service/lib.service';
@@ -19,7 +18,6 @@ export { MatMarkdownEditorOptions, MarkedjsOption } from './lib.interface';
     FormsModule,
     MaterialModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
     FlexLayoutModule,
   ],
   exports: [MatMarkdownEditorComponent],
