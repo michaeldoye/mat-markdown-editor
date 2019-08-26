@@ -29,12 +29,12 @@
     "check-travis": " travis-status --repo=michaeldoye/mat-markdown-editor --branch=master --fail-pending || echo 'Not yet passing'"
   },
   "dependencies": {
-    "@angular/cdk": "^7.3.3",
+    "@angular/cdk": "^8.1.4",
     "@angular/common": "7.2.8",
     "@angular/core": "7.2.8",
     "@angular/flex-layout": "^7.0.0-beta.23",
     "@angular/forms": "^7.2.8",
-    "@angular/material": "^7.3.3",
+    "@angular/material": "^8.1.4",
     "gh-got": "^8.1.0",
     "jest-cli": "^24.3.1",
     "tsickle": "^0.34.3"
