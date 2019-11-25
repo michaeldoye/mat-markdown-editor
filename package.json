@@ -81,7 +81,7 @@
     "postcss-strip-inline-comments": "0.1.5",
     "prettier": "1.16.4",
     "pump": "3.0.0",
-    "raw-loader": "1.0.0",
+    "raw-loader": "4.0.0",
     "rollup": "0.58.2",
     "rollup-plugin-commonjs": "9.1.3",
     "rollup-plugin-node-resolve": "3.3.0",
