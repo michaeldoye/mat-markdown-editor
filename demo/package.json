@@ -47,7 +47,7 @@
     "@nguniversal/common": "^7.1.1",
     "@nguniversal/express-engine": "^7.1.1",
     "@nguniversal/module-map-ngfactory-loader": "^7.1.1",
-    "@types/jest": "24.0.11",
+    "@types/jest": "25.1.0",
     "@types/node": "~11.11.0",
     "angular-cli-ghpages": "0.5.3",
     "ansi-colors": "3.2.4",
